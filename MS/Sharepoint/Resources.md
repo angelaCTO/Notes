@@ -1,7 +1,9 @@
 ###Docs + APIs
 [SharePoint 2013 Documentation](https://msdn.microsoft.com/en-us/library/office/jj162979.aspx) : (MS Direct Site)
 
-[Office Developer MS Office Repo](https://github.com/OfficeDev?utf8=%E2%9C%93&query=sharepoint) : (Github)
+[Office Developer MS Repo](https://github.com/OfficeDev?utf8=%E2%9C%93&query=sharepoint) : (Github)
+
+[Office Developer MS - PnP : Dev Patterns + Practices](https://github.com/OfficeDev/PnP) : (Github)
 
 [SharePoint Wiki](https://en.wikipedia.org/wiki/SharePoint) : Wiki
 

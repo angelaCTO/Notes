@@ -3,6 +3,8 @@
 
 [Office Developer MS Office Repo](https://github.com/OfficeDev?utf8=%E2%9C%93&query=sharepoint) : (Github)
 
+[SharePoint Wiki](https://en.wikipedia.org/wiki/SharePoint) : Wiki
+
 ---
 
 ###Learning 

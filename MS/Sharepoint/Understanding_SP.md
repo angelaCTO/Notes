@@ -1,4 +1,4 @@
-##What Are The Advantages Of SharePoint?
+###What Are The Advantages Of SharePoint?
 
 ---
 
@@ -11,7 +11,8 @@
   - Collaborative Editing
     - Differences are merged, keeps documents recent/relevent
 
-##Sharepoint App Model (The Change From SharePoint Solutions Development)
+
+###Sharepoint App Model :: The Change From SharePoint Solutions Development
 
 ---
 
@@ -35,6 +36,7 @@
       - App permissions can be configured independently of user permissions
       - Apps are deployed by using a publishing scheme based on app catalogs. Apps that are published in a catalog are easier to discover, install, and upgrade
 
+
 ###SharePoint App Model Architecture
 
 ---
@@ -51,5 +53,50 @@
     -  A tenant administrator can create additional site collections and configure the set of services that are available to all the sites running within the tenancy.
   - The architecture of the SharePoint App Model requires that apps are always installed and run within the context of a specific tenancy. 
     - SharePoint 2013 is able to support installing and running SharePoint apps in on-premises farms by transparently creating a farm-wide tenancy behind the scenes that is known as the *Default Tenancy.*
-    
-  
+
+```
+
+                                     SP Farm (2013)
+
+|----------------------------------------------------------------------------------------|
+|                                                                                        |
+|    |---------------------------------|     |--------------------------------------|    |
+|    |           SP Tenancy            |     | App Management Service               |    |   
+|    |  |---------------------------|  |     |   - App Instance Metadata            |    |
+|    |  |      Site Collection      |  |     |   - App Security Principles          |    |
+|    |  |  |---------------------|  |  |     |   - App Permissions                  |    |
+|    |  |  |        Site         |  |  |     |   - App Licensing                    |    |
+|    |  |  |  |---------------|  |  |  |     |--------------------------------------|    |
+|    |  |  |  |  App Instance |  |  |  |                                                 |
+|    |  |  |  |---------------|  |  |  |     |--------------------------------------|    |
+|    |  |  |---------------------|  |  |     | Site Subscription Settings Services  |    |
+|    |  |---------------------------|  |     |   - Tenancy Management               |    |
+|    |---------------------------------|     |   - Site Collection Mappings         |    |
+|                                            |--------------------------------------|    |
+|                                                                                        |
+|----------------------------------------------------------------------------------------|
+```
+
+**App Management Service (AMS)**
+  - Responsible for tracking other types of app specific configuration data that deals with app security principles, permissions, and licensing
+  - Has own DB used to store config details for apps as they are installed and configured
+  - **To Create Instance** : Done via the ***Central Administration*** or by using the ***Farm Creation Wizard*** 
+
+**Site Subscription Setting Service (SSSS)**
+   - Responsible for managing tenancies. Each time a new tenancy is created, this service adds configuration data for it in its own DB
+   - The Site Subscription Settings Service is particularly important to the SharePoint app model due to the requirement that SharePoint apps must always be installed and run within the context of a specific tenancy.
+   - **To Create Instance** : Must be done via the ***Windows Powershell***. When SSSS is created (via powershell), a default tenancy is automatically created which makes it possible to install SP apps in sites throughout the farm
+
+*(Note, if you want to configure support for SP apps in an on-premise farm, you must explicitly create an instance of both AMS and SSSS; else don't worry about creating or configuring either those because they are managed entirely behind the scenes)*
+
+###App Installation Scope
+
+---
+
+**A SP app must be installed before it can be made availble for users. You must install the app within the context of the *target web*. The site from which an app has been launched is known as the *host web***. There are two different scopes "scenarios":
+
+1. **Site Scope** : App is installed and launched within the scope of the same SharePoint site. In this scenario, the host web will always be the same site where the app has been installed.
+
+2. **Tenancy Scope** : App is installed in a special type of SharePoint site known as an ***App Catalog Site***. Once the app has been installed in an app catalog site, the app can then be configured so that users can launch it from other sites. In this scenario, the host web will not be the same site where the app has been installed.
+ - The ability to install and configure apps at tenancy scope is especially valuable for scenarios in which a single app is going to be used by many different users across multiple sites within an Office 365 tenancy or an on-premises farm.
+ - A single administrative user can configure app permissions and manage licensing in one place, which prevents the need to install and configure the app on a site-by-site basis.

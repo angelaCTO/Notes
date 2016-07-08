@@ -7,6 +7,8 @@
 
 [SharePoint Wiki](https://en.wikipedia.org/wiki/SharePoint) : Wiki
 
+[SharePoint Permissions](https://technet.microsoft.com/en-us/library/cc721640.aspx#section1) : (MS Direct Site)
+
 ---
 
 ###Learning 

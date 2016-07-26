@@ -21,20 +21,22 @@ Versioned Item        | Allows linking to a specific version of an item stored i
 Changeset             | Links work items to source code check-ins
 
 **Note** Terminology is important here: 
-  - The *forward end* of the relationship is the *second* part of the link type 
+  - The **forward end** of the relationship is the **second part** of the link type 
      - i.e. In the Parent/Child relationship, Child is the forward end of the relationship 
-  - The *reverse end* of the relationship is the *first* part of the link type.
-  - You can create a **New Linked Work Item** which will allow you to choose from the first 5 items.
-    - In order to create **Hyperlinks**, **Versioned Item** or **Changeset Links** you must select Link To…  because the items at the end of these links cannot be created during the linking process.
+  - The **reverse end** of the relationship is the **first part** of the link type.
+  - You can create a **New Linked Work Item** which will allow you to choose from the first 5 items. In order to create **Hyperlinks**, **Versioned Item** or **Changeset Links** you must select "*Link To…*" because the items at the end of these links cannot be created during the linking process.
   - Link types are not semantic – that is they are only a textual description – with two exceptions.
-  - Parent/Child represents a hierarchical relationship
-  - Predecessor/Successor is used by MS Project to maintain predecessor/successor relationships
+    - Parent/Child represents a hierarchical relationship
+    - Predecessor/Successor is used by MS Project to maintain predecessor/successor relationships
+    - These points have real implications for day to day use. 
+      - For example, if you have two tasks and one is the predecessor to the other, if you start working on the successor task before the predecessor task is closed there is nothing to alert you to that fact – you must check the link types yourself.
 
-These points have real implications for day to day use. For example, if you have two tasks and one is the predecessor to the other, if you start working on the successor task before the predecessor task is closed there is nothing to alert you to that fact – you must check the link types yourself.
+Note, there are two other link types which are not discussed here – **Test Results** and **Result Attachments**. The majority of the time these will never be set by individuals.
 
-* There are two other link types which are not noted on the slide and which are not discussed here – Test Results and Result Attachments. The majority of the time these will never be set by individuals.
-
-
-
-
-
+###Querying Work Items
+**Flat Links**: Depicts a bi-directional relationship where each work item is a peer of the other work item(s)
+**Direct Links**: Depicts a single link level with the reverse end of the relationship first and the forward end of the relationship indented
+  + Direct Links can show only one level of hierarchy. Any more and there could possibly be circular references. Thus, they are only a "one deep" query
+**Tree Links**: Describes a recursive relationship and can only be used with the parent/child (hierarchical) link type
+  + This is a special link type in both MS Project and MS Excel. Both will represent this relationship
+  + Allows for showing multiple levels

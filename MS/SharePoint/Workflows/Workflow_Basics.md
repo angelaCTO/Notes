@@ -41,7 +41,7 @@ To create a workflow, configure and associate the workflow template to a list, l
 
 A list item or file can be related to more than one workflow instance so long as each workflow instance is related to different workflows.
 
-To create a workflow:
+**To create a workflow:**
   1. Provide a workflow name
   2. Decide how workflow instances should start
   3. Complete an association form to provide values that are needed by the workflow 
@@ -52,7 +52,7 @@ To create a workflow:
     + Create task items to remind users of the work they need to complete 
     + Collect information for the next step of the workflow
   - **History List** - Use this list to:
-    + 
+    + Keep track of workflow instances that are running or have been completed for a given list item or document. The workflow writes key information to this list, such as dates, statuses, participants, and descriptions.
 
 
   

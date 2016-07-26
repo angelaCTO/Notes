@@ -1,4 +1,4 @@
-#Workflows
+#Workflow Basics
 
 ---
 
@@ -22,10 +22,37 @@
         - Users who are assigned the **Manage Lists** permission can approve or reject items. 
           - No email is sent to users with the Manage List permission. They would need to visit the list to see if any items are in a pending state.
           
-**Workflows** - Workflows are used to automate and track processes that require human intervention, such as notifying users when their action is required to move the process forward.
+**Workflows** - Workflows are used to automate and track processes that require human intervention, such as notifying users when their action is required to move the process forward. *Workflows are a series of tasks that produce an outcome.*
   - Browser
   - SharePoint Studio
   - Visual Studio
 
 **Event Recievers** - Event receivers are used to automate processes that require no human intervention, such as moving job applications from one document library to a series of other document libraries for some purpose.
   - Visual Studios
+
+---
+
+###Workflow Instances
+
+To create a workflow, configure and associate the workflow template to a list, libary, or site. An instance of the workflow can then be initiated by using the configured workflow template, which defines the conditions that should be tested to decide what tasks to complete to produce the outcome
+
+  1. An instance of the workflow is created when a workflow event is triggered for a specific list item or file
+  2. Once instantiated, it enters the workflow at its start point and progresses through the workflow process (defined by the template) until it reaches the end (state = "Completed")
+
+A list item or file can be related to more than one workflow instance so long as each workflow instance is related to different workflows.
+
+To create a workflow:
+  1. Provide a workflow name
+  2. Decide how workflow instances should start
+  3. Complete an association form to provide values that are needed by the workflow 
+     - If a workflow is set up to start manually, an initiation form may be created (as a kind of "pop-up") that lets users define their own values to be used by the workflow
+
+###Lists Used By Workflow Instances
+  - **Task List** - Use this list to: 
+    + Create task items to remind users of the work they need to complete 
+    + Collect information for the next step of the workflow
+  - **History List** - Use this list to:
+    + 
+
+
+  

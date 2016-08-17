@@ -46,7 +46,7 @@
   **5. Radical Collaboration**  
     - Bring together innovators with varied backgrounds and viewpoints to reconsile perspectives.  
   **6. Embrace Experimenting**   
-    - Prototyping is not simply a way to validate your ideas; it is an integral part of your innovation process. We build to think and learn.
+    - Prototyping is not simply a way to validate your ideas; it is an integral part of your innovation process. We build to think and learn.  
   **7. Bias Towards Actions**  
     - Design Thinking is a misnomer; it is more about doing than thinking. Bias toward doing and making and meeting
   

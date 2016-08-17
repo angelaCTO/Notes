@@ -87,4 +87,4 @@
   
   
   **3. Immerse**  
-    - Experience what your users experience as much as possible. Discover what it's like to do what they do, see what they see. The more variety of expereinces the better.  
+    - Experience what your users experience as much as possible. Discover what it's like to do what they do, see what they see. The more variety of expereinces the better.   

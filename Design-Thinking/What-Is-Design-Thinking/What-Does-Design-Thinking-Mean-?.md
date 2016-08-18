@@ -75,16 +75,3 @@
   
   **7. Bias Towards Actions**  
     - Design Thinking is a misnomer; it is more about doing than thinking. Bias toward doing and making and meeting
-  
-#Design Thinking Step-By-Step  
----
-  **1. Oberve**  
-    - View people and their behavior in the context of their lives or their work. Try waching what your users do. Observing how they interact with their enviroment provides insights into their feelings and needs.      
-  
-  
-  **2. Engage**  
-    - Interact with and interview with users to understand their challenges.      
-  
-  
-  **3. Immerse**  
-    - Experience what your users experience as much as possible. Discover what it's like to do what they do, see what they see. The more variety of expereinces the better.   

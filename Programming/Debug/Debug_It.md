@@ -118,3 +118,40 @@ Refine the reproduction cycle
   - Ask: *"Are you facing multiple interacting causes or changing an underlying system?"*
   - Ask for help - a fresh pair of eyes will do good, once in a while.
   
+---
+---
+
+###***4.0 Fix***
+---
+
+***Bug fixing involves 3 goals :***
+  1. Fix the problem
+  2. Avoid introducing regression
+  3. Maintain and improve overall quality of the code
+
+***Start from a clean souce tree***  
+
+***Ensure that all tests pass before making any changes***  
+  - Tests will ensure your fix address the problem, but can act as safeguard against regression as well.
+  - One of the rules of *Test-First Development* states not to modify anything unless you have a failing test
+    1. Run the existing tests, and demonstrate that they pass
+    2. Add 1+ test cases or fix the existing tests to demonstrate the bug (ie, to fail)
+    3. Fix the bug
+    4. Demonstrate fix works by showing that previously failed tests now pass
+    5. Demonstrate no regression has been introduced by showing that all previous tests that passed still pass
+  
+***Work out how you're going to test your fix before making any changes***  
+
+***Fix the cause, not the symptoms***  
+
+***Refractor, but never at the same time as modifying functionality***  
+
+***One logical change, check-in***  
+  - Diff before check-in
+  - Get your code reviewed  
+
+---
+---
+
+###***5.0 Reflect***
+---
